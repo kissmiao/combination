@@ -1,6 +1,8 @@
 package com.hongliang.baselibrary;
 
+import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -15,6 +17,8 @@ import com.hongliang.retrofitutils.converter.MyGsonConverterFactory;
 import com.hongliang.retrofitutils.util.ExecutorCallAdapterFactory;
 
 import java.io.File;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Cache;
@@ -24,8 +28,9 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 
 public class BaseApplication extends Application {
-    private static BaseApplication instance;
+    private static Context instance;
 
+    public static List<Activity> activities = new LinkedList<>();
     @Override
     public void onCreate() {
         super.onCreate();
@@ -62,7 +67,7 @@ public class BaseApplication extends Application {
 
     }
 
-    public static BaseApplication getInstance() {
+    public static Context getInstance() {
         return instance;
     }
 

@@ -1,7 +1,7 @@
 package com.hongliang.combination;
 
 
-import android.util.Log;
+
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

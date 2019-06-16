@@ -22,13 +22,13 @@ public class HeaderInterceptor implements Interceptor {
 //        String stringheaders = header.get("headerInfos");
 //        builder.addHeader("headerInfos", stringheaders);
 //
-        RequestBody requestBody = originalRequest.body();
+ /*       RequestBody requestBody = originalRequest.body();
         Buffer buffer = new Buffer();
         requestBody.writeTo(buffer);
         String oldParamsJson = buffer.readUtf8();
 
         Log.i("LOG", "oldParamsJson" + oldParamsJson);
-
+*/
 
         //     String sign = EncryptUtils.encryptMD5ToString(stringheaders + oldParamsJson + originalRequest.headers().get("key")).toLowerCase();
 //        builder.addHeader("sign", sign.toLowerCase());
